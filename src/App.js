@@ -1,11 +1,10 @@
-import { Button } from "react-bootstrap";
+import React from "react";
+import { EntryPage } from "./page/EntryPage/EntryPage";
 
 function App() {
   return (
     <div className="App">
-      <Button variant="primary" onClick={() => alert("hello ")}>
-        abhishek
-      </Button>
+      <EntryPage />
     </div>
   );
 }
