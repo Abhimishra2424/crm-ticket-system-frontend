@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import { SearchTextInput } from "../../components/SearchTextInput";
 import { TicketTable } from "../../components/TicketTable";
 import data from "../../assets/data/dummytickets.json";
+import { Link } from "react-router-dom";
 
 export const TicketListsPage = () => {
   const [str, setStr] = useState("");
@@ -35,9 +36,11 @@ export const TicketListsPage = () => {
       </Row>
       <Row style={{ marginTop: "20px" }}>
         <Col>
-          <Button variant="contained" color="primary" size="small">
-            Add New Ticket
-          </Button>
+          <Link to="add-ticket">
+            <Button variant="contained" color="primary" size="small">
+              Add New Ticket
+            </Button>
+          </Link>
         </Col>
         <Col style={{ textAlign: "right" }}>
           <SearchTextInput handleOnChange={handleOnChange} str={str} />
